@@ -8,15 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B4EE774828242EF60076C236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE774728242EF60076C236 /* AppDelegate.swift */; };
-		B4EE774A28242EF60076C236 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE774928242EF60076C236 /* DocumentBrowserViewController.swift */; };
-		B4EE774C28242EF60076C236 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE774B28242EF60076C236 /* DocumentViewController.swift */; };
-		B4EE774E28242EF60076C236 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE774D28242EF60076C236 /* Document.swift */; };
-		B4EE775128242EF60076C236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4EE774F28242EF60076C236 /* Main.storyboard */; };
 		B4EE775328242EF60076C236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4EE775228242EF60076C236 /* Assets.xcassets */; };
 		B4EE775628242EF60076C236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4EE775428242EF60076C236 /* LaunchScreen.storyboard */; };
 		B4EE776128242EF60076C236 /* VivyRepoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE776028242EF60076C236 /* VivyRepoAppTests.swift */; };
 		B4EE776B28242EF60076C236 /* VivyRepoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE776A28242EF60076C236 /* VivyRepoAppUITests.swift */; };
 		B4EE776D28242EF60076C236 /* VivyRepoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE776C28242EF60076C236 /* VivyRepoAppUITestsLaunchTests.swift */; };
+		B4EE777B28242FC10076C236 /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE777A28242FC10076C236 /* RepoListViewController.swift */; };
+		B4EE777D2824305C0076C236 /* RepoListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE777C2824305C0076C236 /* RepoListDataSource.swift */; };
+		B4EE777F282431B30076C236 /* RepoListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE777E282431B30076C236 /* RepoListModule.swift */; };
+		B4EE77BD282443010076C236 /* RepoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE77BC282443010076C236 /* RepoListPresenter.swift */; };
+		B4FC8D3E282455240056067C /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D3D282455240056067C /* Paths.swift */; };
+		B4FC8D40282456210056067C /* RepoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D3F282456210056067C /* RepoListInteractor.swift */; };
+		B4FC8D432824582E0056067C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D422824582E0056067C /* NetworkClient.swift */; };
+		B4FC8D4628245A0B0056067C /* RepositoriesCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D4528245A0B0056067C /* RepositoriesCodable.swift */; };
+		B4FC8D4928245D2D0056067C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D4828245D2D0056067C /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +44,6 @@
 /* Begin PBXFileReference section */
 		B4EE774428242EF60076C236 /* VivyRepoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivyRepoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4EE774728242EF60076C236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4EE774928242EF60076C236 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
-		B4EE774B28242EF60076C236 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
-		B4EE774D28242EF60076C236 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
-		B4EE775028242EF60076C236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4EE775228242EF60076C236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4EE775528242EF60076C236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4EE775728242EF60076C236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,15 @@
 		B4EE776628242EF60076C236 /* VivyRepoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivyRepoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4EE776A28242EF60076C236 /* VivyRepoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivyRepoAppUITests.swift; sourceTree = "<group>"; };
 		B4EE776C28242EF60076C236 /* VivyRepoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivyRepoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B4EE777A28242FC10076C236 /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
+		B4EE777C2824305C0076C236 /* RepoListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListDataSource.swift; sourceTree = "<group>"; };
+		B4EE777E282431B30076C236 /* RepoListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListModule.swift; sourceTree = "<group>"; };
+		B4EE77BC282443010076C236 /* RepoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListPresenter.swift; sourceTree = "<group>"; };
+		B4FC8D3D282455240056067C /* Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
+		B4FC8D3F282456210056067C /* RepoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListInteractor.swift; sourceTree = "<group>"; };
+		B4FC8D422824582E0056067C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		B4FC8D4528245A0B0056067C /* RepositoriesCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesCodable.swift; sourceTree = "<group>"; };
+		B4FC8D4828245D2D0056067C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +111,13 @@
 		B4EE774628242EF60076C236 /* VivyRepoApp */ = {
 			isa = PBXGroup;
 			children = (
+				B4FC8D412824581F0056067C /* Shared */,
+				B4EE777928242FAB0076C236 /* RepoList */,
 				B4EE774728242EF60076C236 /* AppDelegate.swift */,
-				B4EE774928242EF60076C236 /* DocumentBrowserViewController.swift */,
-				B4EE774B28242EF60076C236 /* DocumentViewController.swift */,
-				B4EE774D28242EF60076C236 /* Document.swift */,
-				B4EE774F28242EF60076C236 /* Main.storyboard */,
 				B4EE775228242EF60076C236 /* Assets.xcassets */,
 				B4EE775428242EF60076C236 /* LaunchScreen.storyboard */,
 				B4EE775728242EF60076C236 /* Info.plist */,
+				B4FC8D3D282455240056067C /* Paths.swift */,
 			);
 			path = VivyRepoApp;
 			sourceTree = "<group>";
@@ -128,6 +137,44 @@
 				B4EE776C28242EF60076C236 /* VivyRepoAppUITestsLaunchTests.swift */,
 			);
 			path = VivyRepoAppUITests;
+			sourceTree = "<group>";
+		};
+		B4EE777928242FAB0076C236 /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				B4EE777A28242FC10076C236 /* RepoListViewController.swift */,
+				B4EE777C2824305C0076C236 /* RepoListDataSource.swift */,
+				B4EE777E282431B30076C236 /* RepoListModule.swift */,
+				B4EE77BC282443010076C236 /* RepoListPresenter.swift */,
+				B4FC8D3F282456210056067C /* RepoListInteractor.swift */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
+		B4FC8D412824581F0056067C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B4FC8D4728245D1F0056067C /* Network */,
+				B4FC8D44282459CC0056067C /* Codable */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B4FC8D44282459CC0056067C /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				B4FC8D4528245A0B0056067C /* RepositoriesCodable.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		B4FC8D4728245D1F0056067C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B4FC8D422824582E0056067C /* NetworkClient.swift */,
+				B4FC8D4828245D2D0056067C /* Endpoint.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +283,6 @@
 			files = (
 				B4EE775628242EF60076C236 /* LaunchScreen.storyboard in Resources */,
 				B4EE775328242EF60076C236 /* Assets.xcassets in Resources */,
-				B4EE775128242EF60076C236 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4EE774E28242EF60076C236 /* Document.swift in Sources */,
-				B4EE774C28242EF60076C236 /* DocumentViewController.swift in Sources */,
-				B4EE774A28242EF60076C236 /* DocumentBrowserViewController.swift in Sources */,
+				B4FC8D3E282455240056067C /* Paths.swift in Sources */,
+				B4EE777B28242FC10076C236 /* RepoListViewController.swift in Sources */,
+				B4FC8D40282456210056067C /* RepoListInteractor.swift in Sources */,
+				B4FC8D4628245A0B0056067C /* RepositoriesCodable.swift in Sources */,
+				B4FC8D4928245D2D0056067C /* Endpoint.swift in Sources */,
 				B4EE774828242EF60076C236 /* AppDelegate.swift in Sources */,
+				B4EE77BD282443010076C236 /* RepoListPresenter.swift in Sources */,
+				B4EE777D2824305C0076C236 /* RepoListDataSource.swift in Sources */,
+				B4EE777F282431B30076C236 /* RepoListModule.swift in Sources */,
+				B4FC8D432824582E0056067C /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B4EE774F28242EF60076C236 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B4EE775028242EF60076C236 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B4EE775428242EF60076C236 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +490,6 @@
 				INFOPLIST_FILE = VivyRepoApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
@@ -475,7 +518,6 @@
 				INFOPLIST_FILE = VivyRepoApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
