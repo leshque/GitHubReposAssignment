@@ -32,23 +32,31 @@ class RepoListPresenter: RepoListPresenterProtocol {
     let interactor: RepoListInteractorProtocol
     
     init(
-        view: RepoListViewProtocol,
         interactor: RepoListInteractorProtocol
     ) {
-        self.view = view
         self.interactor = interactor
     }
     
+    var workItem: DispatchWorkItem?
+    
     lazy var onSearch: (String) -> () = { [weak self] query in
         guard let self = self else { return }
-        self.searchRepos(query: query) { result in
-            switch result {
-            case .success(let repositoriesDTO):
-                self.view?.render(viewModel: self.viewModel(from: repositoriesDTO))
-            case .failure(_):
-                self.view?.render(viewModel: self.initialViewModel())
+        
+        self.workItem?.cancel()
+        
+        let searchWorkItem = DispatchWorkItem {
+            self.searchRepos(query: query) { result in
+                switch result {
+                case .success(let repositoriesDTO):
+                    self.view?.render(viewModel: self.viewModel(from: repositoriesDTO))
+                case .failure(_):
+                    self.view?.render(viewModel: self.initialViewModel())
+                }
             }
         }
+        
+        self.workItem = searchWorkItem
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: searchWorkItem)
     }
     
     func viewDidLoad() {

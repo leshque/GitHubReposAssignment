@@ -43,6 +43,7 @@ class RepoListViewController: UIViewController, RepoListViewProtocol {
     
     // MARK: Dependencies
     
+    let presenter: RepoListPresenterProtocol
     let dataSource: RepoListDataSourceProtocol
     
     // MARK: UI
@@ -63,7 +64,9 @@ class RepoListViewController: UIViewController, RepoListViewProtocol {
     
     // MARK: ViewController Lifecycle
     
-    init(dataSource: RepoListDataSourceProtocol) {
+    init(presenter: RepoListPresenterProtocol,
+         dataSource: RepoListDataSourceProtocol) {
+        self.presenter = presenter
         self.dataSource = dataSource
         super.init(nibName: nil, bundle: nil)
     }
@@ -75,6 +78,7 @@ class RepoListViewController: UIViewController, RepoListViewProtocol {
     override func viewDidLoad() {
         setupView()
         layoutViews()
+        presenter.viewDidLoad()
     }
     
     // MARK: Private Properties
@@ -106,6 +110,8 @@ class RepoListViewController: UIViewController, RepoListViewProtocol {
     
     func render(viewModel: RepoListViewModel) {
         onSearch = viewModel.actions.onSearch
+        print("\(#function) called with:")
+        print("Repos: \(viewModel.repos.map { $0.title + " " + $0.subtitle })")
     }
 
 }

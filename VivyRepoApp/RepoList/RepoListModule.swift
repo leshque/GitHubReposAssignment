@@ -10,15 +10,29 @@ import UIKit
 
 protocol RepoListModuleProtocol {
     
-    func getView() -> UIViewController
+    func getView() -> UINavigationController
     
 }
 
 class RepoListModule: RepoListModuleProtocol {
     
-    func getView() -> UIViewController {
-        let repoVC = RepoListViewController(dataSource: RepoListDataSource())
+    func getView() -> UINavigationController {
+        let presenter = getPresenter()
+        let repoVC = RepoListViewController(presenter: presenter, dataSource: RepoListDataSource())
+        presenter.view = repoVC
         return UINavigationController(rootViewController: repoVC)
+    }
+    
+    private func getPresenter() -> RepoListPresenter {
+        RepoListPresenter(interactor: getInteractor())
+    }
+    
+    private func getInteractor() -> RepoListInteractorProtocol {
+        RepoListInteractor(networkClient: getNetworkClient())
+    }
+    
+    private func getNetworkClient() -> NetworkClientProtocol {
+        NetworkClient()
     }
     
 }

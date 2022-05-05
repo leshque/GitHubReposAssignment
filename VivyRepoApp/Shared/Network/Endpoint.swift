@@ -8,9 +8,11 @@
 import Foundation
 
 enum Sorting: String {
+    
     case numberOfStars = "stars"
     case numberOfForks = "forks"
     case recency = "updated"
+    
 }
 
 struct Endpoint {

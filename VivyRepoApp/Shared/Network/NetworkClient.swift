@@ -33,17 +33,16 @@ class NetworkClient: NetworkClientProtocol {
         completion: @escaping (Result<RepositoriesCodable, Error>) -> ()
     ) {
         request(.search(query: query)) { result in
-            switch result {
-            case .success(let data):
-                let decoder = JSONDecoder()
-                if let repositories = try? decoder.decode(RepositoriesCodable.self, from: data) {
-                    let count = repositories.items.count
-                    for (index, item) in repositories.items.enumerated() {
-                        print("Repo #\(index + 1) from \(count): \(item.full_name)(\(item.forks_count)")
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let data):
+                    let decoder = JSONDecoder()
+                    if let repositories = try? decoder.decode(RepositoriesCodable.self, from: data) {
+                        completion(.success(repositories))
                     }
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-            case .failure(let error):
-                completion(.failure(error))
             }
         }
     }
@@ -55,7 +54,6 @@ class NetworkClient: NetworkClientProtocol {
         guard let url = endpoint.url else {
             return completion(.failure(NetworkError.invalidURL))
         }
-        
         let task = urlSession.dataTask(with: url) {
             data, _, error in
             
@@ -63,7 +61,6 @@ class NetworkClient: NetworkClientProtocol {
                 .failure(NetworkError.network(error ?? NetworkError.unknown))
             completion(result)
         }
-        
         task.resume()
     }
     
