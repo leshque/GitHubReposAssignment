@@ -29,16 +29,12 @@ class BranchListModule: BranchListModuleProtocol {
     func presenter(repoName: String) -> BranchListPresenter {
         BranchListPresenter(
             repoName: repoName,
-            interactor: interactor
+            interactor: interactor()
         )
     }
     
-    lazy var interactor: BranchListInteractorProtocol = {
-        BranchListInteractor(networkClient: networkClient)
-    }()
-    
-    lazy var networkClient: NetworkClientProtocol = {
-        AppEnvironment.shared.networkClient
-    }()
+    func interactor() -> BranchListInteractorProtocol {
+        BranchListInteractor(networkClient: AppEnvironment.shared.networkClient)
+    }
     
 }

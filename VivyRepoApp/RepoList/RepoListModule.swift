@@ -28,16 +28,12 @@ class RepoListModule: RepoListModuleProtocol {
     }
     
     func presenter() -> RepoListPresenter {
-        RepoListPresenter(interactor: interactor)
+        RepoListPresenter(interactor: interactor())
     }
     
-    lazy var interactor: RepoListInteractorProtocol = {
-        RepoListInteractor(networkClient: networkClient)
-    }()
-    
-    lazy var networkClient: NetworkClientProtocol = {
-        AppEnvironment.shared.networkClient
-    }()
-    
+    func interactor() -> RepoListInteractorProtocol {
+        RepoListInteractor(networkClient: AppEnvironment.shared.networkClient)
+    }
+        
 }
 
