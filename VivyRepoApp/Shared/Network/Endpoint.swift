@@ -32,8 +32,18 @@ extension Endpoint {
             path: "/search/repositories",
             queryItems: [
                 URLQueryItem(name: "q", value: query),
-                URLQueryItem(name: "sort", value: sorting.rawValue)
+                URLQueryItem(name: "sort", value: sorting.rawValue),
+                URLQueryItem(name: "per_page", value: "10")
             ]
+        )
+    }
+    
+    static func branches(
+        repoFullName: String
+    ) -> Endpoint {
+        return Endpoint(
+            path: "/repos/\(repoFullName)/branches",
+            queryItems: []
         )
     }
     

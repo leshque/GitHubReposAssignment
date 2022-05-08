@@ -29,7 +29,6 @@ struct RepoListViewModel {
 struct RepositoryViewModel {
     
     let title: String
-    let subtitle: String
     
 }
 
@@ -111,7 +110,7 @@ class RepoListViewController: UIViewController, RepoListViewProtocol {
     func render(viewModel: RepoListViewModel) {
         onSearch = viewModel.actions.onSearch
         print("\(#function) called with:")
-        print("Repos: \(viewModel.repos.map { $0.title + " " + $0.subtitle })")
+        print("Repos: \(viewModel.repos.map { $0.title })")
     }
 
 }

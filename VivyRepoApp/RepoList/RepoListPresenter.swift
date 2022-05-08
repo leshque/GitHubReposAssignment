@@ -7,19 +7,6 @@
 
 import Foundation
 
-struct RepositoriesDTO {
-    
-    let repositories: [RepositoryDTO]
-    
-}
-
-struct RepositoryDTO {
-    
-    let name: String
-    let forksCount: Int
-    
-}
-
 protocol RepoListPresenterProtocol {
 
     func viewDidLoad()
@@ -42,6 +29,7 @@ class RepoListPresenter: RepoListPresenterProtocol {
     lazy var onSearch: (String) -> () = { [weak self] query in
         guard let self = self else { return }
         
+        // Cancelling the API call if user input has changed
         self.workItem?.cancel()
         
         let searchWorkItem = DispatchWorkItem {
@@ -85,10 +73,11 @@ class RepoListPresenter: RepoListPresenterProtocol {
 extension RepoListPresenter {
     
     func viewModel(from repositories: RepositoriesDTO) -> RepoListViewModel {
-        RepoListViewModel(
+        return RepoListViewModel(
             actions: RepoListViewModel.Actions(onSearch: onSearch),
             repos: repositories.repositories.map {
-                RepositoryViewModel(title: $0.name, subtitle: "\($0.forksCount)")
+                let branchCountText = $0.branchesCount == 100 ? "100+?" : "\($0.branchesCount)"
+                return RepositoryViewModel(title: "\($0.name) (\(branchCountText))")
             }
         )
     }

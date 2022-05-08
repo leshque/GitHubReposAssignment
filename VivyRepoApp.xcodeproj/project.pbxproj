@@ -21,6 +21,8 @@
 		B4FC8D432824582E0056067C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D422824582E0056067C /* NetworkClient.swift */; };
 		B4FC8D4628245A0B0056067C /* RepositoriesCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D4528245A0B0056067C /* RepositoriesCodable.swift */; };
 		B4FC8D4928245D2D0056067C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D4828245D2D0056067C /* Endpoint.swift */; };
+		B4FC8D4D28258BB90056067C /* BranchCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D4C28258BB90056067C /* BranchCodable.swift */; };
+		B4FC8D502825A5A80056067C /* RepositoriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D4F2825A5A80056067C /* RepositoriesDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		B4FC8D422824582E0056067C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		B4FC8D4528245A0B0056067C /* RepositoriesCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesCodable.swift; sourceTree = "<group>"; };
 		B4FC8D4828245D2D0056067C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B4FC8D4C28258BB90056067C /* BranchCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchCodable.swift; sourceTree = "<group>"; };
+		B4FC8D4F2825A5A80056067C /* RepositoriesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		B4EE777928242FAB0076C236 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
+				B4FC8D4E2825A5960056067C /* DTOs */,
 				B4EE777A28242FC10076C236 /* RepoListViewController.swift */,
 				B4EE777C2824305C0076C236 /* RepoListDataSource.swift */,
 				B4EE777E282431B30076C236 /* RepoListModule.swift */,
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				B4FC8D4528245A0B0056067C /* RepositoriesCodable.swift */,
+				B4FC8D4C28258BB90056067C /* BranchCodable.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -172,6 +178,14 @@
 				B4FC8D4828245D2D0056067C /* Endpoint.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B4FC8D4E2825A5960056067C /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				B4FC8D4F2825A5A80056067C /* RepositoriesDTO.swift */,
+			);
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,10 +322,12 @@
 				B4FC8D40282456210056067C /* RepoListInteractor.swift in Sources */,
 				B4FC8D4628245A0B0056067C /* RepositoriesCodable.swift in Sources */,
 				B4FC8D4928245D2D0056067C /* Endpoint.swift in Sources */,
+				B4FC8D502825A5A80056067C /* RepositoriesDTO.swift in Sources */,
 				B4EE774828242EF60076C236 /* AppDelegate.swift in Sources */,
 				B4EE77BD282443010076C236 /* RepoListPresenter.swift in Sources */,
 				B4EE777D2824305C0076C236 /* RepoListDataSource.swift in Sources */,
 				B4EE777F282431B30076C236 /* RepoListModule.swift in Sources */,
+				B4FC8D4D28258BB90056067C /* BranchCodable.swift in Sources */,
 				B4FC8D432824582E0056067C /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

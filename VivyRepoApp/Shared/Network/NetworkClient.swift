@@ -12,6 +12,7 @@ enum NetworkError: Error {
     case invalidURL
     case network(Error)
     case unknown
+    case parsing
     
 }
 
@@ -22,6 +23,11 @@ protocol NetworkClientProtocol {
         completion: @escaping (Result<RepositoriesCodable, Error>) -> ()
     )
 
+    func getBranches(
+        repoFullName: String,
+        completion: @escaping (Result<[BranchCodable], Error>) -> ()
+    )
+    
 }
 
 class NetworkClient: NetworkClientProtocol {
@@ -47,7 +53,28 @@ class NetworkClient: NetworkClientProtocol {
         }
     }
     
-    func request(
+    func getBranches(
+        repoFullName: String,
+        completion: @escaping (Result<[BranchCodable], Error>) -> ()
+    ) {
+        request(.branches(repoFullName: repoFullName)) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let data):
+                    let decoder = JSONDecoder()
+                    if let repositories = try? decoder.decode([BranchCodable].self, from: data) {
+                        completion(.success(repositories))
+                    } else {
+                        completion(.failure(NetworkError.parsing))
+                    }
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+    
+    private func request(
         _ endpoint: Endpoint,
         completion: @escaping (Result<Data, NetworkError>) -> Void
     ) {
