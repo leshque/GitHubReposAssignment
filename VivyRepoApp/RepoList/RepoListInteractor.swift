@@ -90,7 +90,6 @@ extension RepoListInteractor {
             repositories: repositories.items.map {
                 RepositoryDTO(
                     name: $0.full_name,
-                    forksCount: $0.forks_count,
                     branchCount: branchesCountDict[$0.full_name] ?? 0
                 )
             }
