@@ -151,7 +151,6 @@
 		B4EE777928242FAB0076C236 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
-				B4FC8D4E2825A5960056067C /* DTOs */,
 				B4EE777A28242FC10076C236 /* RepoListViewController.swift */,
 				B4EE777C2824305C0076C236 /* BasicTableDataSource.swift */,
 				B4EE777E282431B30076C236 /* RepoListModule.swift */,
@@ -164,6 +163,7 @@
 		B4FC8D412824581F0056067C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B4FC8D4E2825A5960056067C /* DTOs */,
 				B4FC8D4728245D1F0056067C /* Network */,
 				B4FC8D44282459CC0056067C /* Codable */,
 			);
