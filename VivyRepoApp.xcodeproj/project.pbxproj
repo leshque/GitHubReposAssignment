@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B44EFC1028285F7700D696A9 /* BranchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC0F28285F7700D696A9 /* BranchListViewController.swift */; };
+		B44EFC122828603200D696A9 /* BranchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC112828603200D696A9 /* BranchListPresenter.swift */; };
+		B44EFC142828607700D696A9 /* BranchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC132828607700D696A9 /* BranchListInteractor.swift */; };
+		B44EFC162828613D00D696A9 /* BranchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC152828613D00D696A9 /* BranchDTO.swift */; };
+		B44EFC182828632D00D696A9 /* NetworkClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC172828632D00D696A9 /* NetworkClientFactory.swift */; };
+		B44EFC1A282863B500D696A9 /* BranchListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC19282863B500D696A9 /* BranchListModule.swift */; };
 		B4EE774828242EF60076C236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE774728242EF60076C236 /* AppDelegate.swift */; };
 		B4EE775328242EF60076C236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4EE775228242EF60076C236 /* Assets.xcassets */; };
 		B4EE775628242EF60076C236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4EE775428242EF60076C236 /* LaunchScreen.storyboard */; };
@@ -14,7 +20,7 @@
 		B4EE776B28242EF60076C236 /* VivyRepoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE776A28242EF60076C236 /* VivyRepoAppUITests.swift */; };
 		B4EE776D28242EF60076C236 /* VivyRepoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE776C28242EF60076C236 /* VivyRepoAppUITestsLaunchTests.swift */; };
 		B4EE777B28242FC10076C236 /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE777A28242FC10076C236 /* RepoListViewController.swift */; };
-		B4EE777D2824305C0076C236 /* RepoListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE777C2824305C0076C236 /* RepoListDataSource.swift */; };
+		B4EE777D2824305C0076C236 /* BasicTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE777C2824305C0076C236 /* BasicTableDataSource.swift */; };
 		B4EE777F282431B30076C236 /* RepoListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE777E282431B30076C236 /* RepoListModule.swift */; };
 		B4EE77BD282443010076C236 /* RepoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE77BC282443010076C236 /* RepoListPresenter.swift */; };
 		B4FC8D40282456210056067C /* RepoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC8D3F282456210056067C /* RepoListInteractor.swift */; };
@@ -43,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B44EFC0F28285F7700D696A9 /* BranchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListViewController.swift; sourceTree = "<group>"; };
+		B44EFC112828603200D696A9 /* BranchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListPresenter.swift; sourceTree = "<group>"; };
+		B44EFC132828607700D696A9 /* BranchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListInteractor.swift; sourceTree = "<group>"; };
+		B44EFC152828613D00D696A9 /* BranchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDTO.swift; sourceTree = "<group>"; };
+		B44EFC172828632D00D696A9 /* NetworkClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientFactory.swift; sourceTree = "<group>"; };
+		B44EFC19282863B500D696A9 /* BranchListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListModule.swift; sourceTree = "<group>"; };
 		B4EE774428242EF60076C236 /* VivyRepoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivyRepoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4EE774728242EF60076C236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4EE775228242EF60076C236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,7 +66,7 @@
 		B4EE776A28242EF60076C236 /* VivyRepoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivyRepoAppUITests.swift; sourceTree = "<group>"; };
 		B4EE776C28242EF60076C236 /* VivyRepoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivyRepoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B4EE777A28242FC10076C236 /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
-		B4EE777C2824305C0076C236 /* RepoListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListDataSource.swift; sourceTree = "<group>"; };
+		B4EE777C2824305C0076C236 /* BasicTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableDataSource.swift; sourceTree = "<group>"; };
 		B4EE777E282431B30076C236 /* RepoListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListModule.swift; sourceTree = "<group>"; };
 		B4EE77BC282443010076C236 /* RepoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListPresenter.swift; sourceTree = "<group>"; };
 		B4FC8D3F282456210056067C /* RepoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListInteractor.swift; sourceTree = "<group>"; };
@@ -90,6 +102,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B44EFC0E28285F5E00D696A9 /* BranchList */ = {
+			isa = PBXGroup;
+			children = (
+				B44EFC0F28285F7700D696A9 /* BranchListViewController.swift */,
+				B44EFC112828603200D696A9 /* BranchListPresenter.swift */,
+				B44EFC132828607700D696A9 /* BranchListInteractor.swift */,
+				B44EFC19282863B500D696A9 /* BranchListModule.swift */,
+			);
+			path = BranchList;
+			sourceTree = "<group>";
+		};
 		B4EE773B28242EF60076C236 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +136,7 @@
 		B4EE774628242EF60076C236 /* VivyRepoApp */ = {
 			isa = PBXGroup;
 			children = (
+				B44EFC0E28285F5E00D696A9 /* BranchList */,
 				B4FC8D412824581F0056067C /* Shared */,
 				B4EE777928242FAB0076C236 /* RepoList */,
 				B4EE774728242EF60076C236 /* AppDelegate.swift */,
@@ -145,7 +169,7 @@
 			children = (
 				B4FC8D4E2825A5960056067C /* DTOs */,
 				B4EE777A28242FC10076C236 /* RepoListViewController.swift */,
-				B4EE777C2824305C0076C236 /* RepoListDataSource.swift */,
+				B4EE777C2824305C0076C236 /* BasicTableDataSource.swift */,
 				B4EE777E282431B30076C236 /* RepoListModule.swift */,
 				B4EE77BC282443010076C236 /* RepoListPresenter.swift */,
 				B4FC8D3F282456210056067C /* RepoListInteractor.swift */,
@@ -176,6 +200,7 @@
 			children = (
 				B4FC8D422824582E0056067C /* NetworkClient.swift */,
 				B4FC8D4828245D2D0056067C /* Endpoint.swift */,
+				B44EFC172828632D00D696A9 /* NetworkClientFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -184,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				B4FC8D4F2825A5A80056067C /* RepositoriesDTO.swift */,
+				B44EFC152828613D00D696A9 /* BranchDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -319,15 +345,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4EE777B28242FC10076C236 /* RepoListViewController.swift in Sources */,
+				B44EFC122828603200D696A9 /* BranchListPresenter.swift in Sources */,
+				B44EFC142828607700D696A9 /* BranchListInteractor.swift in Sources */,
+				B44EFC162828613D00D696A9 /* BranchDTO.swift in Sources */,
 				B4FC8D40282456210056067C /* RepoListInteractor.swift in Sources */,
 				B4FC8D4628245A0B0056067C /* RepositoriesCodable.swift in Sources */,
+				B44EFC182828632D00D696A9 /* NetworkClientFactory.swift in Sources */,
 				B4FC8D4928245D2D0056067C /* Endpoint.swift in Sources */,
 				B4FC8D502825A5A80056067C /* RepositoriesDTO.swift in Sources */,
+				B44EFC1A282863B500D696A9 /* BranchListModule.swift in Sources */,
 				B4EE774828242EF60076C236 /* AppDelegate.swift in Sources */,
 				B4EE77BD282443010076C236 /* RepoListPresenter.swift in Sources */,
-				B4EE777D2824305C0076C236 /* RepoListDataSource.swift in Sources */,
+				B4EE777D2824305C0076C236 /* BasicTableDataSource.swift in Sources */,
 				B4EE777F282431B30076C236 /* RepoListModule.swift in Sources */,
 				B4FC8D4D28258BB90056067C /* BranchCodable.swift in Sources */,
+				B44EFC1028285F7700D696A9 /* BranchListViewController.swift in Sources */,
 				B4FC8D432824582E0056067C /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,7 +29,7 @@ class RepoListPresenter: RepoListPresenterProtocol {
     lazy var onSearch: (String) -> () = { [weak self] query in
         guard let self = self else { return }
         
-        // Cancelling the API call if user input has changed
+        // Cancelling the API call if user input has changed within 0.5 second
         self.workItem?.cancel()
         
         let searchWorkItem = DispatchWorkItem {
@@ -67,7 +67,11 @@ class RepoListPresenter: RepoListPresenterProtocol {
             }
         }
     }
-    
+ 
+    func openRepoDetails(name: String) {
+        print("wants to open repo details: \(name)")
+        view?.presentDetails(repoName: name)
+    }
 }
 
 extension RepoListPresenter {
@@ -76,10 +80,29 @@ extension RepoListPresenter {
         return RepoListViewModel(
             actions: RepoListViewModel.Actions(onSearch: onSearch),
             repos: repositories.repositories.map {
-                let branchCountText = $0.branchesCount == 100 ? "100+?" : "\($0.branchesCount)"
-                return RepositoryViewModel(title: "\($0.name) (\(branchCountText))")
+                let branchCountText = branchCountText($0.branchCount)
+                let name = $0.name
+                return BasicCellViewModel(
+                    title: "\($0.name) (\(branchCountText))",
+                    onTap: { [weak self] in
+                        guard let self = self else { return }
+                        self.openRepoDetails(name: name)
+                    }
+                )
             }
         )
+    }
+    
+    private func branchCountText(_ branchCount: Int) -> String {
+        switch branchCount {
+        case -1:
+            return "Error"
+        case 100:
+            return "100+? branches"
+        default:
+            return "\(branchCount) branches"
+        }
+
     }
     
     func initialViewModel() -> RepoListViewModel {

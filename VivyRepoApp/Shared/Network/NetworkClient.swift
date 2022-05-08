@@ -62,8 +62,8 @@ class NetworkClient: NetworkClientProtocol {
                 switch result {
                 case .success(let data):
                     let decoder = JSONDecoder()
-                    if let repositories = try? decoder.decode([BranchCodable].self, from: data) {
-                        completion(.success(repositories))
+                    if let branches = try? decoder.decode([BranchCodable].self, from: data) {
+                        completion(.success(branches))
                     } else {
                         completion(.failure(NetworkError.parsing))
                     }

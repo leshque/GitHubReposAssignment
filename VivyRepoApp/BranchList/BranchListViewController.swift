@@ -1,37 +1,31 @@
 //
-//  RepoListViewController.swift
+//  BranchListViewController.swift
 //  VivyRepoApp
 //
 //  Created by Aliaksei Prokharau on 05.05.22.
 //
 
+import Foundation
 import UIKit
 
-struct RepoListViewModel {
-        
-    struct Actions {
-        
-        let onSearch: (String) -> ()
-        
-    }
-    
-    let actions: Actions
-    let repos: [BasicCellViewModel]
+struct BranchListViewModel {
+            
+    let title: String
+    let branches: [BasicCellViewModel]
     
 }
 
-protocol RepoListViewProtocol: AnyObject {
- 
-    func render(viewModel: RepoListViewModel)
-    func presentDetails(repoName: String)
+protocol BranchListViewProtocol: AnyObject {
+    
+    func render(viewModel: BranchListViewModel)
     
 }
 
-class RepoListViewController: UIViewController, RepoListViewProtocol {
+class BranchListViewController: UIViewController, BranchListViewProtocol {
     
     // MARK: Dependencies
     
-    let presenter: RepoListPresenterProtocol
+    let presenter: BranchListPresenterProtocol
     let dataSource: BasicTableDataSourceProtocol
     
     // MARK: UI
@@ -42,16 +36,9 @@ class RepoListViewController: UIViewController, RepoListViewProtocol {
         return view
     }()
     
-    lazy var searchBar: UISearchBar = {
-        let bar = UISearchBar()
-        bar.translatesAutoresizingMaskIntoConstraints = false
-        bar.placeholder = "Enter Repo name..."
-        return bar
-    }()
-    
     // MARK: ViewController Lifecycle
     
-    init(presenter: RepoListPresenterProtocol,
+    init(presenter: BranchListPresenterProtocol,
          dataSource: BasicTableDataSourceProtocol) {
         self.presenter = presenter
         self.dataSource = dataSource
@@ -67,20 +54,14 @@ class RepoListViewController: UIViewController, RepoListViewProtocol {
         layoutViews()
         presenter.viewDidLoad()
     }
-    
-    // MARK: Private Properties
-    
-    var onSearch: (String) -> () = { _ in }
-    
+        
     // MARK: Private Methods
     
     private func setupView() {
         tableView.delegate = dataSource
         tableView.dataSource = dataSource
-        searchBar.delegate = self
 
         view.addSubview(tableView)
-        navigationItem.titleView = searchBar
     }
     
     private func layoutViews() {
@@ -95,30 +76,12 @@ class RepoListViewController: UIViewController, RepoListViewProtocol {
     
     // MARK: RepoListViewProtocol
     
-    func render(viewModel: RepoListViewModel) {
-        onSearch = viewModel.actions.onSearch
+    func render(viewModel: BranchListViewModel) {
+        navigationItem.title = viewModel.title
         dataSource.render(
             tableView: tableView,
-            cellViewModels: viewModel.repos
+            cellViewModels: viewModel.branches
         )
-    }
-
-}
-
-extension RepoListViewController: UISearchBarDelegate {
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        onSearch(searchText)
-    }
-    
-}
-
-// This extension wants to become some sort of Router/Coordinator
-extension RepoListViewController {
-
-    func presentDetails(repoName: String) {
-        let branchListView = BranchListModule().getView(repoName: repoName)
-        navigationController?.pushViewController(branchListView, animated: true)
     }
     
 }

@@ -17,23 +17,26 @@ protocol RepoListModuleProtocol {
 class RepoListModule: RepoListModuleProtocol {
     
     func getView() -> UINavigationController {
-        let repoVC = RepoListViewController(presenter: presenter, dataSource: RepoListDataSource())
+        let presenter = presenter()
+        let repoVC = RepoListViewController(
+            presenter: presenter,
+            dataSource: BasicTableDataSource()
+        )
         presenter.view = repoVC
         let navController = UINavigationController(rootViewController: repoVC)
-        navController.view.backgroundColor = .orange
         return navController
     }
     
-    lazy var presenter: RepoListPresenter = {
+    func presenter() -> RepoListPresenter {
         RepoListPresenter(interactor: interactor)
-    }()
+    }
     
     lazy var interactor: RepoListInteractorProtocol = {
         RepoListInteractor(networkClient: networkClient)
     }()
     
     lazy var networkClient: NetworkClientProtocol = {
-        NetworkClient()
+        AppEnvironment.shared.networkClient
     }()
     
 }

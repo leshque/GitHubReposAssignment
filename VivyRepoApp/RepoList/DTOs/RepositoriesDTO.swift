@@ -17,6 +17,6 @@ struct RepositoryDTO {
     
     let name: String
     let forksCount: Int
-    let branchesCount: Int
+    let branchCount: Int
     
 }
