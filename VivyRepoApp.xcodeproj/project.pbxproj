@@ -13,10 +13,12 @@
 		B44EFC162828613D00D696A9 /* BranchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC152828613D00D696A9 /* BranchDTO.swift */; };
 		B44EFC182828632D00D696A9 /* NetworkClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC172828632D00D696A9 /* NetworkClientFactory.swift */; };
 		B44EFC1A282863B500D696A9 /* BranchListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC19282863B500D696A9 /* BranchListModule.swift */; };
+		B44EFC1D282868E100D696A9 /* MockRepoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC1C282868E100D696A9 /* MockRepoListInteractor.swift */; };
+		B44EFC1F282869EE00D696A9 /* MockRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC1E282869EE00D696A9 /* MockRepoListView.swift */; };
+		B44EFC2128286A5B00D696A9 /* RepoListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC2028286A5B00D696A9 /* RepoListPresenterTests.swift */; };
 		B4EE774828242EF60076C236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE774728242EF60076C236 /* AppDelegate.swift */; };
 		B4EE775328242EF60076C236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4EE775228242EF60076C236 /* Assets.xcassets */; };
 		B4EE775628242EF60076C236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4EE775428242EF60076C236 /* LaunchScreen.storyboard */; };
-		B4EE776128242EF60076C236 /* VivyRepoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE776028242EF60076C236 /* VivyRepoAppTests.swift */; };
 		B4EE776B28242EF60076C236 /* VivyRepoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE776A28242EF60076C236 /* VivyRepoAppUITests.swift */; };
 		B4EE776D28242EF60076C236 /* VivyRepoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE776C28242EF60076C236 /* VivyRepoAppUITestsLaunchTests.swift */; };
 		B4EE777B28242FC10076C236 /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EE777A28242FC10076C236 /* RepoListViewController.swift */; };
@@ -55,13 +57,15 @@
 		B44EFC152828613D00D696A9 /* BranchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDTO.swift; sourceTree = "<group>"; };
 		B44EFC172828632D00D696A9 /* NetworkClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientFactory.swift; sourceTree = "<group>"; };
 		B44EFC19282863B500D696A9 /* BranchListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListModule.swift; sourceTree = "<group>"; };
+		B44EFC1C282868E100D696A9 /* MockRepoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoListInteractor.swift; sourceTree = "<group>"; };
+		B44EFC1E282869EE00D696A9 /* MockRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoListView.swift; sourceTree = "<group>"; };
+		B44EFC2028286A5B00D696A9 /* RepoListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListPresenterTests.swift; sourceTree = "<group>"; };
 		B4EE774428242EF60076C236 /* VivyRepoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivyRepoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4EE774728242EF60076C236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4EE775228242EF60076C236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4EE775528242EF60076C236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4EE775728242EF60076C236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4EE775C28242EF60076C236 /* VivyRepoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivyRepoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4EE776028242EF60076C236 /* VivyRepoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivyRepoAppTests.swift; sourceTree = "<group>"; };
 		B4EE776628242EF60076C236 /* VivyRepoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivyRepoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4EE776A28242EF60076C236 /* VivyRepoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivyRepoAppUITests.swift; sourceTree = "<group>"; };
 		B4EE776C28242EF60076C236 /* VivyRepoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivyRepoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -113,6 +117,15 @@
 			path = BranchList;
 			sourceTree = "<group>";
 		};
+		B44EFC1B282868CA00D696A9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B44EFC1C282868E100D696A9 /* MockRepoListInteractor.swift */,
+				B44EFC1E282869EE00D696A9 /* MockRepoListView.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		B4EE773B28242EF60076C236 = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				B44EFC0E28285F5E00D696A9 /* BranchList */,
-				B4FC8D412824581F0056067C /* Shared */,
 				B4EE777928242FAB0076C236 /* RepoList */,
+				B4FC8D412824581F0056067C /* Shared */,
 				B4EE774728242EF60076C236 /* AppDelegate.swift */,
 				B4EE775228242EF60076C236 /* Assets.xcassets */,
 				B4EE775428242EF60076C236 /* LaunchScreen.storyboard */,
@@ -150,7 +163,8 @@
 		B4EE775F28242EF60076C236 /* VivyRepoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				B4EE776028242EF60076C236 /* VivyRepoAppTests.swift */,
+				B44EFC1B282868CA00D696A9 /* Mocks */,
+				B44EFC2028286A5B00D696A9 /* RepoListPresenterTests.swift */,
 			);
 			path = VivyRepoAppTests;
 			sourceTree = "<group>";
@@ -368,7 +382,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4EE776128242EF60076C236 /* VivyRepoAppTests.swift in Sources */,
+				B44EFC2128286A5B00D696A9 /* RepoListPresenterTests.swift in Sources */,
+				B44EFC1D282868E100D696A9 /* MockRepoListInteractor.swift in Sources */,
+				B44EFC1F282869EE00D696A9 /* MockRepoListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,7 @@ class RepoListPresenter: RepoListPresenterProtocol {
         self.interactor = interactor
     }
     
-    var workItem: DispatchWorkItem?
+    private var workItem: DispatchWorkItem?
     
     lazy var onSearch: (String) -> () = { [weak self] query in
         guard let self = self else { return }
@@ -51,7 +51,7 @@ class RepoListPresenter: RepoListPresenterProtocol {
         view?.render(viewModel: initialViewModel())
     }
     
-    func searchRepos(
+    private func searchRepos(
         query: String,
         completion: (Result<RepositoriesDTO, Error>) -> ()
     ) {
@@ -62,7 +62,7 @@ class RepoListPresenter: RepoListPresenterProtocol {
                 let viewModel = self.viewModel(from: repsDTO)
                 self.view?.render(viewModel: viewModel)
             case .failure(_):
-                let viewModel = self.initialViewModel()
+                let viewModel = self.errorViewModel()
                 self.view?.render(viewModel: viewModel)
             }
         }
@@ -107,6 +107,10 @@ extension RepoListPresenter {
     
     func initialViewModel() -> RepoListViewModel {
         RepoListViewModel(actions: RepoListViewModel.Actions(onSearch: onSearch), repos: [])
+    }
+    
+    func errorViewModel() -> RepoListViewModel {
+        RepoListViewModel(actions: RepoListViewModel.Actions(onSearch: onSearch), repos: [BasicCellViewModel(title: "Error fetching Repos", onTap: { })])
     }
     
 }
