@@ -11,7 +11,7 @@
 		B44EFC122828603200D696A9 /* BranchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC112828603200D696A9 /* BranchListPresenter.swift */; };
 		B44EFC142828607700D696A9 /* BranchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC132828607700D696A9 /* BranchListInteractor.swift */; };
 		B44EFC162828613D00D696A9 /* BranchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC152828613D00D696A9 /* BranchDTO.swift */; };
-		B44EFC182828632D00D696A9 /* NetworkClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC172828632D00D696A9 /* NetworkClientFactory.swift */; };
+		B44EFC182828632D00D696A9 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC172828632D00D696A9 /* AppEnvironment.swift */; };
 		B44EFC1A282863B500D696A9 /* BranchListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC19282863B500D696A9 /* BranchListModule.swift */; };
 		B44EFC1D282868E100D696A9 /* MockRepoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC1C282868E100D696A9 /* MockRepoListInteractor.swift */; };
 		B44EFC1F282869EE00D696A9 /* MockRepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC1E282869EE00D696A9 /* MockRepoListView.swift */; };
@@ -46,7 +46,7 @@
 		B44EFC112828603200D696A9 /* BranchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListPresenter.swift; sourceTree = "<group>"; };
 		B44EFC132828607700D696A9 /* BranchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListInteractor.swift; sourceTree = "<group>"; };
 		B44EFC152828613D00D696A9 /* BranchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDTO.swift; sourceTree = "<group>"; };
-		B44EFC172828632D00D696A9 /* NetworkClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientFactory.swift; sourceTree = "<group>"; };
+		B44EFC172828632D00D696A9 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		B44EFC19282863B500D696A9 /* BranchListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListModule.swift; sourceTree = "<group>"; };
 		B44EFC1C282868E100D696A9 /* MockRepoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoListInteractor.swift; sourceTree = "<group>"; };
 		B44EFC1E282869EE00D696A9 /* MockRepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoListView.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 			children = (
 				B4FC8D422824582E0056067C /* NetworkClient.swift */,
 				B4FC8D4828245D2D0056067C /* Endpoint.swift */,
-				B44EFC172828632D00D696A9 /* NetworkClientFactory.swift */,
+				B44EFC172828632D00D696A9 /* AppEnvironment.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 				B44EFC162828613D00D696A9 /* BranchDTO.swift in Sources */,
 				B4FC8D40282456210056067C /* RepoListInteractor.swift in Sources */,
 				B4FC8D4628245A0B0056067C /* RepositoriesCodable.swift in Sources */,
-				B44EFC182828632D00D696A9 /* NetworkClientFactory.swift in Sources */,
+				B44EFC182828632D00D696A9 /* AppEnvironment.swift in Sources */,
 				B4FC8D4928245D2D0056067C /* Endpoint.swift in Sources */,
 				B4FC8D502825A5A80056067C /* RepositoriesDTO.swift in Sources */,
 				B44EFC1A282863B500D696A9 /* BranchListModule.swift in Sources */,

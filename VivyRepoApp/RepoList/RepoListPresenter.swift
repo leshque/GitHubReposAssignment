@@ -72,6 +72,7 @@ class RepoListPresenter: RepoListPresenterProtocol {
         print("wants to open repo details: \(name)")
         view?.presentDetails(repoName: name)
     }
+    
 }
 
 extension RepoListPresenter {
