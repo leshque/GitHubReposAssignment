@@ -11,12 +11,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var router: RouterProtocol?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let module = RepoListModule()
+
         let appWindow = UIWindow()
-        appWindow.rootViewController = module.getView()
-        window = appWindow
+        let router = MainRouter()
+
+        self.window = appWindow
+        self.router = router
+        
+        appWindow.rootViewController = router.getInitialView()
+        
         window?.makeKeyAndVisible()
         return true
     }

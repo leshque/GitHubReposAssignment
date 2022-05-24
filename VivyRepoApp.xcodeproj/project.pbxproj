@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68A8AC9C283D0A5600A6C6D6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8AC9B283D0A5600A6C6D6 /* Router.swift */; };
 		B44EFC1028285F7700D696A9 /* BranchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC0F28285F7700D696A9 /* BranchListViewController.swift */; };
 		B44EFC122828603200D696A9 /* BranchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC112828603200D696A9 /* BranchListPresenter.swift */; };
 		B44EFC142828607700D696A9 /* BranchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC132828607700D696A9 /* BranchListInteractor.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68A8AC9B283D0A5600A6C6D6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B44EFC0F28285F7700D696A9 /* BranchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListViewController.swift; sourceTree = "<group>"; };
 		B44EFC112828603200D696A9 /* BranchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListPresenter.swift; sourceTree = "<group>"; };
 		B44EFC132828607700D696A9 /* BranchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListInteractor.swift; sourceTree = "<group>"; };
@@ -87,6 +89,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68A8AC98283D0A2C00A6C6D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4EE777C2824305C0076C236 /* BasicTableDataSource.swift */,
+				B4EE777A28242FC10076C236 /* RepoListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68A8AC99283D0A3300A6C6D6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B4EE77BC282443010076C236 /* RepoListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		68A8AC9A283D0A3F00A6C6D6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B4FC8D3F282456210056067C /* RepoListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		B44EFC0E28285F5E00D696A9 /* BranchList */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,11 +178,10 @@
 		B4EE777928242FAB0076C236 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
-				B4EE777A28242FC10076C236 /* RepoListViewController.swift */,
-				B4EE777C2824305C0076C236 /* BasicTableDataSource.swift */,
+				68A8AC9A283D0A3F00A6C6D6 /* Interactor */,
+				68A8AC99283D0A3300A6C6D6 /* Presenter */,
+				68A8AC98283D0A2C00A6C6D6 /* View */,
 				B4EE777E282431B30076C236 /* RepoListModule.swift */,
-				B4EE77BC282443010076C236 /* RepoListPresenter.swift */,
-				B4FC8D3F282456210056067C /* RepoListInteractor.swift */,
 			);
 			path = RepoList;
 			sourceTree = "<group>";
@@ -166,6 +192,7 @@
 				B4FC8D4E2825A5960056067C /* DTOs */,
 				B4FC8D4728245D1F0056067C /* Network */,
 				B4FC8D44282459CC0056067C /* Codable */,
+				68A8AC9B283D0A5600A6C6D6 /* Router.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -302,6 +329,7 @@
 				B44EFC122828603200D696A9 /* BranchListPresenter.swift in Sources */,
 				B44EFC142828607700D696A9 /* BranchListInteractor.swift in Sources */,
 				B44EFC162828613D00D696A9 /* BranchDTO.swift in Sources */,
+				68A8AC9C283D0A5600A6C6D6 /* Router.swift in Sources */,
 				B4FC8D40282456210056067C /* RepoListInteractor.swift in Sources */,
 				B4FC8D4628245A0B0056067C /* RepositoriesCodable.swift in Sources */,
 				B44EFC182828632D00D696A9 /* AppEnvironment.swift in Sources */,
@@ -479,6 +507,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,6 +536,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

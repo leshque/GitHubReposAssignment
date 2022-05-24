@@ -16,12 +16,15 @@ protocol RepoListPresenterProtocol {
 class RepoListPresenter: RepoListPresenterProtocol {
     
     weak var view: RepoListViewProtocol?
+    unowned var router: RouterProtocol
     let interactor: RepoListInteractorProtocol
     
     init(
-        interactor: RepoListInteractorProtocol
+        interactor: RepoListInteractorProtocol,
+        router: RouterProtocol
     ) {
         self.interactor = interactor
+        self.router = router
     }
     
     private var workItem: DispatchWorkItem?
@@ -70,7 +73,7 @@ class RepoListPresenter: RepoListPresenterProtocol {
  
     func openRepoDetails(name: String) {
         print("wants to open repo details: \(name)")
-        view?.presentDetails(repoName: name)
+        router.openRepoDetails(repoName: name)
     }
     
 }

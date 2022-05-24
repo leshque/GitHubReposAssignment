@@ -44,6 +44,7 @@ class BasicTableDataSource: NSObject, BasicTableDataSourceProtocol {
             return UITableViewCell()
         }
         cell.textLabel?.text = items[indexPath.row].title
+        cell.selectionStyle = .none
         return cell
     }
     

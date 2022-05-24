@@ -23,7 +23,6 @@ struct RepoListViewModel {
 protocol RepoListViewProtocol: AnyObject {
  
     func render(viewModel: RepoListViewModel)
-    func presentDetails(repoName: String)
     
 }
 
@@ -109,16 +108,6 @@ extension RepoListViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         onSearch(searchText)
-    }
-    
-}
-
-// This extension wants to become some sort of Router/Coordinator
-extension RepoListViewController {
-
-    func presentDetails(repoName: String) {
-        let branchListView = BranchListModule().getView(repoName: repoName)
-        navigationController?.pushViewController(branchListView, animated: true)
     }
     
 }

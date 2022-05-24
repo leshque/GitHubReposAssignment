@@ -10,25 +10,27 @@ import UIKit
 
 protocol RepoListModuleProtocol {
     
-    func getView() -> UINavigationController
+    func getView(router: RouterProtocol) -> UIViewController
     
 }
 
 class RepoListModule: RepoListModuleProtocol {
     
-    func getView() -> UINavigationController {
-        let presenter = presenter()
+    func getView(router: RouterProtocol) -> UIViewController {
+        let presenter = presenter(router: router)
         let repoVC = RepoListViewController(
             presenter: presenter,
             dataSource: BasicTableDataSource()
         )
         presenter.view = repoVC
-        let navController = UINavigationController(rootViewController: repoVC)
-        return navController
+        return repoVC
     }
     
-    func presenter() -> RepoListPresenter {
-        RepoListPresenter(interactor: interactor())
+    func presenter(router: RouterProtocol) -> RepoListPresenter {
+        RepoListPresenter(
+            interactor: interactor(),
+            router: router
+        )
     }
     
     func interactor() -> RepoListInteractorProtocol {
