@@ -14,11 +14,16 @@ class RepoListPresenterTests: XCTestCase {
     var presenter: RepoListPresenter!
     var mockRepoListInteractor: MockRepoListInteractor!
     var mockRepoListView: MockRepoListView!
+    var mockRouter: MockRouter!
     
     override func setUp() {
         mockRepoListInteractor = MockRepoListInteractor()
         mockRepoListView = MockRepoListView()
-        presenter = RepoListPresenter(interactor: mockRepoListInteractor)
+        mockRouter = MockRouter()
+        presenter = RepoListPresenter(
+            interactor: mockRepoListInteractor,
+            router: mockRouter
+        )
         presenter.view = mockRepoListView
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		68A8AC9C283D0A5600A6C6D6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8AC9B283D0A5600A6C6D6 /* Router.swift */; };
+		68A8AC9E283D242600A6C6D6 /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8AC9D283D242600A6C6D6 /* MockRouter.swift */; };
 		B44EFC1028285F7700D696A9 /* BranchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC0F28285F7700D696A9 /* BranchListViewController.swift */; };
 		B44EFC122828603200D696A9 /* BranchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC112828603200D696A9 /* BranchListPresenter.swift */; };
 		B44EFC142828607700D696A9 /* BranchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44EFC132828607700D696A9 /* BranchListInteractor.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		68A8AC9B283D0A5600A6C6D6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		68A8AC9D283D242600A6C6D6 /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
 		B44EFC0F28285F7700D696A9 /* BranchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListViewController.swift; sourceTree = "<group>"; };
 		B44EFC112828603200D696A9 /* BranchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListPresenter.swift; sourceTree = "<group>"; };
 		B44EFC132828607700D696A9 /* BranchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchListInteractor.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				B44EFC1C282868E100D696A9 /* MockRepoListInteractor.swift */,
 				B44EFC1E282869EE00D696A9 /* MockRepoListView.swift */,
+				68A8AC9D283D242600A6C6D6 /* MockRouter.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			files = (
 				B44EFC2128286A5B00D696A9 /* RepoListPresenterTests.swift in Sources */,
 				B44EFC1D282868E100D696A9 /* MockRepoListInteractor.swift in Sources */,
+				68A8AC9E283D242600A6C6D6 /* MockRouter.swift in Sources */,
 				B44EFC1F282869EE00D696A9 /* MockRepoListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
